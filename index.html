@@ -144,7 +144,7 @@ function autocomplete(inp, arr) {
 }
 
 
-var diseaseSearch = ["", "", "", "", "", "", "", "", "", "", "นิ่ว", "ธาตุพิการ", "ช้ำใน", "ชันนะตุ", "ดีซ่าน", "ตาฝ้าฟาง", "ไตพิการ", "ตับอักเสบ", "ตับทรุด", "ตะปูตำ", "ธาตุพิการ", "ท้องผูก", "ท้องเสีย", "อาหารเป็นพิษ", "ท้องอืด", "ท้องร่วง", "พยาธิ", "แก้พิษงู", "บำรุงเลือด", "งูสวัด", "เคล็ดยอกปวดบวม", "ปวดหัว", "ผึ้งต่อยแตนต่อย", "น้ำร้อนลวก", "ปวดฟันรำมะนาด", "เกลื้อน", "กระดูก ยาบำรุง", "กระเพาะ ยารักษาโรค", "ตัวร้อน", "ความดันโลหิตสูง", "เจ็บคอ", "เจ็บหลัง ปวดบั้นเอว",  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "มะเร็งทำท้องให้ลงจนตัวเหลือง", "ประสานเนื้อให้สนิท", "ลมจับ", "มะเร็งแตกทั้งตัว", "ไฟไหม้น้ำร้อนลวก", "เม็ดคันเปื่อยลามน้ำเหลืองไหล", "ปลุกกามารมณ์", "ปวดเมื่อย", "เหน็บชา", "งูกัด", "ฝีบวม", "ไข้หนาวสั่น", "เจ็บหลังเจ็บเอว", "ฝีในท้องและซูบเหลืองทั้งตัว", "ปัสสาวะขัด", "อาเจียน" , "เสมหะปะทะ", "ป้าง", "บิด", "ปัสสาวะออกเป็นโลหิต", "ฝีในท้องหรือฝีภายนอก", "จิ้งเหลนกัดและข่วน", "สัตว์มีพิษกัดต่อย", "หืด", "ถ่ายพยาธิ", "คอพอก"];
+var diseaseSearch = ["", "", "", "", "", "", "", "", "", "", "ริดสีดวงทวาร", "ย่อยอาหาร", "แมลงเข้าหู", "เมาเหล้า", "เมาคลื่น", "เพดานปากเปื่อย", "แพ้ท้อง", "พิษยา", "พิษงู", "ผิวแห้งตกกระ", "ผมแตกปลาย", "ผมร่วง", "ผมแห้ง", "คิ้วดก", "ผมดก", "ผิวหนังผื่นคัน", "แผลในปาก", "สมานแผล", "ตัวเหม็น", "บาดทะยัก", "บวม", "น้ำกัดเท้า", "นิ่ว", "ธาตุพิการ", "ช้ำใน", "ชันนะตุ", "ดีซ่าน", "ตาฝ้าฟาง", "ไตพิการ", "ตับอักเสบ", "ตับทรุด", "ตะปูตำ", "ธาตุพิการ", "ท้องผูก", "ท้องเสีย", "อาหารเป็นพิษ", "ท้องอืด", "ท้องร่วง", "พยาธิ", "แก้พิษงู", "บำรุงเลือด", "งูสวัด", "เคล็ดยอกปวดบวม", "ปวดหัว", "ผึ้งต่อยแตนต่อย", "น้ำร้อนลวก", "ปวดฟันรำมะนาด", "เกลื้อน", "กระดูก ยาบำรุง", "กระเพาะ ยารักษาโรค", "ตัวร้อน", "ความดันโลหิตสูง", "เจ็บคอ", "เจ็บหลัง ปวดบั้นเอว",  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "มะเร็งทำท้องให้ลงจนตัวเหลือง", "ประสานเนื้อให้สนิท", "ลมจับ", "มะเร็งแตกทั้งตัว", "ไฟไหม้น้ำร้อนลวก", "เม็ดคันเปื่อยลามน้ำเหลืองไหล", "ปลุกกามารมณ์", "ปวดเมื่อย", "เหน็บชา", "งูกัด", "ฝีบวม", "ไข้หนาวสั่น", "เจ็บหลังเจ็บเอว", "ฝีในท้องและซูบเหลืองทั้งตัว", "ปัสสาวะขัด", "อาเจียน" , "เสมหะปะทะ", "ป้าง", "บิด", "ปัสสาวะออกเป็นโลหิต", "ฝีในท้องหรือฝีภายนอก", "จิ้งเหลนกัดและข่วน", "สัตว์มีพิษกัดต่อย", "หืด", "ถ่ายพยาธิ", "คอพอก"];
 
 autocomplete(document.getElementById("disease"), diseaseSearch);
 
@@ -154,25 +154,77 @@ autocomplete(document.getElementById("disease"), diseaseSearch);
         if (disease === "ปัสสาวะขัด"){
           document.getElementById('txt').innerHTML = '• ให้เอา <b>ใบกระเพรา</b> เต็มกำมือหนึ่ง <b>ดินประสิวขาว</b> หนักสองสลึง บดให้ละเอียด เอาใบชาต้มเป็นกระสายละลายยา เมื่อกินแล้วให้กินน้ำชาทีหลังสัก ๒-๓ ที ปัสสาวะจะออกไปสะดวก เป็นยาเพทย์ฝรั่งดีแท้'
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
-        }else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
-        }else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
         } else if (disease === ""){
-          document.getElementById('txt').innerHTML = '• '
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === ""){
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === ""){
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === ""){
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === ""){
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === ""){
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === ""){
+          document.getElementById('txt').innerHTML = '• <b></b> '
+        } else if (disease === "ริดสีดวงทวาร"){
+          document.getElementById('txt').innerHTML = '• <b>ผักบุ้งกับน้ำตาลทรายขาว</b> ใช้ต้นสด ๑ กิโล น้ำ ๑ ลิตร ต้มให้เละ เอากากทิ้ง ใส่น้ำตาลทรายขาว ๑๒๐ กรัม เคี่ยวให้ข้นเหนียวเหมือนน้ำเชื่อม กินครั้งละ ๙๐ กรัม วันละ ๒ ครั้ง เช้า-เย็น'
+        } else if (disease === "ย่อยอาหาร"){
+          document.getElementById('txt').innerHTML = '• <b>สับปะรด</b> เนื้อสับปะรดช่วยย่อยเนื้อ ควรกินหลังอาหาร'
+        } else if (disease === "แมลงเข้าหู"){
+          document.getElementById('txt').innerHTML = '• <b>ควันบุหรี่</b> ดูดควันบุหรี่ใส่หูนั้น ๔-๕ ครั้ง แมลงนั้นก็จะออกมา'
+        } else if (disease === "เมาเหล้า"){
+          document.getElementById('txt').innerHTML = '• <b>กาแฟผง</b> ชงในน้ำเดือดห้ามใส่น้ำตาล ให้คนเมาดื่มเข้าไปนอนพัก จะหายภายใน ๑๕ นาที'
+        } else if (disease === "เมาคลื่น"){
+          document.getElementById('txt').innerHTML = '• <b>น้ำ</b> ตักน้ำตบบนศีรษะ ประมาณสัก ๑ ปิ๊ป จะหายทันที'
+        } else if (disease === "เพดานปากเปื่อย"){
+          document.getElementById('txt').innerHTML = '• <b>เกลือ</b> ใส่ในบริเวณแผล แรกๆจะรู้สึกแสบ แต่ใส่สองครั้งก็จะหายเป็นปลิดทิ้ง'
+        } else if (disease === "แพ้ท้อง"){
+          document.getElementById('txt').innerHTML = '• <b>ปลาตัวเล็ก</b> ทอดกรอบกินทั้งก้างจะช่วยแก้แพ้ท้องได้'
+        } else if (disease === "พิษยา"){
+          document.getElementById('txt').innerHTML = '• <b>ไข่ไก่</b> ทันทีที่รู้สึกว่าดื่มยาพิษเข้าไปหรือกินยาผิด เอาไข่ดิบ ๒-๓ ฟองกินเข้าไป จะทำให้อาเจียนคายพิษออกทันที แล้วจึงนำส่งโรงพยาบาล'
+        } else if (disease === "พิษงู"){
+          document.getElementById('txt').innerHTML = '• <b>ผักบุ้ง</b> ใช้ต้นสะอาด คั้นเอาน้ำประมาณครึ่งถ้วย ผสมสุราขาวกิน เอากากพอกแผล'
+        } else if (disease === "ผิวแห้งตกกระ"){
+          document.getElementById('txt').innerHTML = '• <b>น้ำมันมะกอก</b> เหยาะน้ำมันมะกอกบริสุทธิ์ลงในน้ำร้อน แล้วนำมาอังบริเวณผิวที่แห้ง ทำทุกๆวันผิวจะผ่องไม่หยาบ'
+        } else if (disease === "ผมแตกปลาย"){
+          document.getElementById('txt').innerHTML = '• <b>ตะไคร้</b> ๒-๓ ต้น มาตำให้ละเอียด แล้วนำมาคั้นกรองแต่น้ำไว้ใช้นวดผมหลังสระเสร็จ ทิ้งไว้สักครู่จึงล้างออกด้วยน้ำสะอาด'
+        } else if (disease === "ผมร่วง"){
+          document.getElementById('txt').innerHTML = '• <b>เกลือ</b> สระผมให้สะอาดแล้วใช้เกลือผสมน้ำอุ่นทา นวดหนังศรีษะจนรู้สึกร้อน จึงล้างออกให้สะอาด'
+        } else if (disease === "ผมแห้ง"){
+          document.getElementById('txt').innerHTML = '• <b>ไข่ไก่ น้ำมันมะกอก</b> ก่อนสระใช้ไข่แดงไข่ไก่ ๒ ฟอง ผสมน้ำมันมะกอก ๒ ช้อนโต๊ะ ชโลมทาให้ทั่วเส้นผม'
+        } else if (disease === "คิ้วดก"){
+          document.getElementById('txt').innerHTML = '• <b>หัวกะทิ มะกรูด</b> ใช้น้ำหัวกะทิผสมกับมะกรูด ๑ ผล ใส่คิ้วทิ้งไว้สักพักใหญ่ เอาผ้าโพกไว้ยิ่งดี แล้วจึงล้างคิ้วตามปกติ ในไม่ช้าคิ้วจะดำดกขึ้น'
+        } else if (disease === "ผมดก"){
+          document.getElementById('txt').innerHTML = '• <b>หัวกะทิ มะกรูด</b> ใช้น้ำหัวกะทิผสมกับมะกรูด ๑ ผล ใส่ผมทิ้งไว้สักพักใหญ่ เอาผ้าโพกไว้ยิ่งดี แล้วจึงสระผมตามปกติ ในไม่ช้าผมจะดำดกขึ้น'
+        }else if (disease === "ผิวหนังผื่นคัน"){
+          document.getElementById('txt').innerHTML = '• <b>ตำลึง</b> เอาใบตำลึงมาตำแล้วถูตามตัว'
+        } else if (disease === "แผลในปาก"){
+          document.getElementById('txt').innerHTML = '• <b>น้ำตาลอ้อย</b> เอาน้ำตาลอ้อยถูที่แผล ไม่นานแผลจะแตก และหายใน ๒-๓ วัน'
+        } else if (disease === "สมานแผล"){
+          document.getElementById('txt').innerHTML = '• <b>หนุมานประสานกาย</b> ใช้ใบโขลกพอกแผล ห้ามเลือด สมานแผล'
+        } else if (disease === "ตัวเหม็น"){
+          document.getElementById('txt').innerHTML = '• <b>ใบฝรั่งสด</b> ใบฝรั่งสดๆ ย่างไฟพอหอมชงน้ำชากินต่างน้ำ ทำเสมอๆปากและลมหายใจเหม็นจะหายไป แม้กลิ่นตัวเหม็นก็จะหายไป'
+        } else if (disease === "บาดทะยัก"){
+          document.getElementById('txt').innerHTML = '• <b>น้ำเกลือ</b> ใช้น้ำเกลือต้มทิ้งให้เย็น เอาอผลที่ถูกตะปูตำแช่กันบาดทะยัก'
+        }else if (disease === "บวม"){
+          document.getElementById('txt').innerHTML = '• <b>ดินสอพอง</b> เด็กหัวล้ม หัวฟาดฟกช้ำ เอาดินสอพองผสม<b>น้ำมะนาว</b>พอก โน บวม จะยุบ'
+        } else if (disease === "น้ำกัดเท้า"){
+          document.getElementById('txt').innerHTML = '• <b>หมาก</b> เอาเนื้อหมากดิบที่ฝานใหม่ๆ ทาที่ซอกนิ้วหลายๆครั้ง แก้น้ำกัด'
         } else if (disease === "นิ่ว"){
           document.getElementById('txt').innerHTML = '• <b>มะเฟือง</b> ใช้น้ำมะเฟืองผสมน้ำส้มสายชูหรือสุรา ดื่มแก้นิ่ว'
         }else if (disease === "ธาตุพิการ"){
